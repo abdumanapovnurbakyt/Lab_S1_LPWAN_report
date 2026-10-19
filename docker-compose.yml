@@ -1,0 +1,20 @@
+x-lab: &lab
+  build: .
+  image: lab-s1-lpwan
+
+services:
+  tests:
+    <<: *lab
+    command: python tests.py
+
+  quick:
+    <<: *lab
+    command: python run_all.py --quick
+    volumes:
+      - ./results:/app/results
+
+  sim:
+    <<: *lab
+    command: python run_all.py
+    volumes:
+      - ./results:/app/results

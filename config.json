@@ -1,0 +1,91 @@
+{
+  "radio": {
+    "bw_hz": 125000,
+    "cr": 1,
+    "preamble_syms": 8,
+    "explicit_header": true,
+    "crc": true,
+    "payload_app_bytes": 20,
+    "mac_overhead_bytes": 13,
+    "tx_power_dbm": 14,
+    "sensitivity_dbm": {
+      "7": -123.0,
+      "8": -126.0,
+      "9": -129.0,
+      "10": -132.0,
+      "11": -134.5,
+      "12": -137.0
+    }
+  },
+  "network": {
+    "channels": 3,
+    "capture_threshold_db": 6.0,
+    "orthogonal_sf": true,
+    "gateway_demodulators": 8,
+    "disk_radius_km": 1.0,
+    "adr_radius_km": 5.0,
+    "adr_margin_db": 10.0,
+    "pathloss": {
+      "pl_d0_db": 120.0,
+      "d0_km": 1.0,
+      "exponent": 3.0,
+      "shadowing_sigma_db": 6.0
+    },
+    "duty_cycle": 0.01
+  },
+  "grid": {
+    "n_devices": [
+      100,
+      500,
+      1000,
+      5000
+    ],
+    "sf": [
+      7,
+      9,
+      12
+    ],
+    "interval_s": [
+      60,
+      300,
+      600,
+      3600
+    ],
+    "base_interval_s": 600,
+    "n_sweep_min": 3,
+    "n_sweep_max": 50000,
+    "n_sweep_points": 28
+  },
+  "sim": {
+    "seeds": 5,
+    "base_seed": 20261018,
+    "target_packets": 60000,
+    "min_periods": 8
+  },
+  "energy": {
+    "supply_v": 3.3,
+    "tx_ma": 44.0,
+    "rx_ma": 10.8,
+    "mcu_active_ma": 3.0,
+    "mcu_active_s": 0.15,
+    "sleep_ua": 5.0,
+    "rx_symbols": 6,
+    "rx_margin_s": 0.01,
+    "rx2_sf": 12,
+    "battery_mah": 2400,
+    "usable_fraction": 0.85,
+    "self_discharge_pct_per_year": 1.0,
+    "confirmed_max_retries": 3,
+    "ack_phy_bytes": 12,
+    "intervals_s": [
+      60,
+      300,
+      600,
+      900,
+      1800,
+      3600,
+      21600,
+      86400
+    ]
+  }
+}
